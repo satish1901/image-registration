@@ -15,6 +15,7 @@ Image Registration is the process of transforming two or more images/data into t
   
 ## How to Run Code:
    python img_reg.py -i image_1.png image_2.png -a "the method for image registration" 
+   
    If you don't provide any method, it will run RANSAC bydefault
  
 ## How to install OpenCV 3.4.3 using CMAKE
