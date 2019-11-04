@@ -14,7 +14,23 @@ Image Registration is the process of transforming two or more images/data into t
    2. python 3.5/3.6 
   
 ## How to Run Code:
-   python img_reg.py -i image_1.png image_2.png -a "the method for image registration"
+   python img_reg.py -i image_1.png image_2.png -a "the method for image registration" 
    If you don't provide any method, it will run RANSAC bydefault
-   
-  
+ 
+## How to install OpenCV 3.4.3 using CMAKE
+You can follow this link
+ https://docs.opencv.org/3.4.3/d7/d9f/tutorial_linux_install.html
+ 
+ In Step2, you need to use the following command
+
+CXXFLAGS="-std=c++11" cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D INSTALL_PYTHON_EXAMPLES=ON \
+-D INSTALL_C_EXAMPLES=OFF \
+-D BUILD_opencv_java=OFF \
+-D OPENCV_EXTRA_MODULES_PATH="path to opencv_contrib-3.4.3/modules" \
+-D WITH_TBB=ON \
+-D WITH_OPENGL=ON \
+-D PYTHON_EXECUTABLE=~/.virtualenvs/aero_cv/bin/python or "path to virtual environment python" \
+-D OPENCV_ENABLE_NONFREE=ON \
+-D BUILD_EXAMPLES=ON ..
